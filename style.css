@@ -1,0 +1,31 @@
+html, body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #4d4d4d;
+}
+
+h1 {
+	font-size: 20px;
+	margin: 0;
+}
+
+#noteText {
+	border: none;
+	outline: none;
+}
+
+#header-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+#header-wrapper h1 {
+	font-size: 15px;
+}
+
+#submit-button {
+	outline: none;
+	transition: 0.5s filter linear;
+}

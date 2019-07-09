@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Study Group Creation</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400"
+			rel="stylesheet"
+		/>
+		<link href="style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div id="header-wrapper">
+			<h1>Add your array of study group objects below:</h1>
+			<input type="submit" id="submit-button" value="Create Study Groups" />
+		</div>
+
+		<textarea
+			id="sg-objects"
+			cols="60"
+			rows="20"
+			placeholder="[
+	{
+		categories: ['HTML Basics'],
+		title: 'Test One',
+		description: 'Come join.',
+		day: 'Saturday',
+		time: '10:30 am',
+		weekToStart: 1,
+		weekToEnd: 1,
+		zoom: 'https://wework.zoom.us/my/amelie'
+	},
+	{
+		categories: ['Intro to Ruby Development', 'Ruby'],
+		title: 'Test Two',
+		description: 'Come join.',
+		day: 'Monday',
+		time: '06:00 PM',
+		weekToStart: 2,
+		weekToEnd: 5,
+		zoom: 'https://wework.zoom.us/my/amelie'
+	}
+];"
+		></textarea>
+
+		<script src="popup.js"></script>
+	</body>
+</html>
