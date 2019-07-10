@@ -2,7 +2,7 @@ let sgObject = document.getElementById('sg-objects');
 sgObject.focus();
 
 chrome.storage.sync.get('sg', function(data) {
-	sgObject.value = data.sg;
+	sgObject.value = data.sg ? data.sg : '';
 });
 
 sgObject.addEventListener(
