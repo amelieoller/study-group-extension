@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	color: #4d4d4d;
@@ -9,9 +10,14 @@ h1 {
 	margin: 0;
 }
 
-#noteText {
-	border: none;
+.container {
+	min-width: 500px;
+}
+
+#sg-objects {
+	border: 1px solid #dbdbdb;
 	outline: none;
+	font-size: 15px;
 }
 
 #header-wrapper {
@@ -22,10 +28,28 @@ h1 {
 }
 
 #header-wrapper h1 {
-	font-size: 15px;
+	font-size: 19px;
 }
 
 #submit-button {
-	outline: none;
+	border-radius: 5px;
+	padding: 11px 26px;
+	font-weight: 700;
+	font-size: 14px;
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	white-space: nowrap;
+	transition: all 0.12s;
+	cursor: pointer;
 	transition: 0.5s filter linear;
+	color: #fff;
+	background-color: #00b3e6;
+	border: 1px solid #00b3e6;
+}
+
+#submit-button:hover {
+	color: hsla(0, 0%, 100%, 0.9);
+	background-color: #01c7ff;
+	text-decoration: none;
 }

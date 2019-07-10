@@ -1,10 +1,16 @@
 {
-  "name": "SG Creation",
+  "name": "Flatiron SG Creation",
 	"version": "1.0",
   "manifest_version": 2,
-  "description": "Create Study Groups",
+  "description": "Create Flatiron Study Groups in Bulk",
   "browser_action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+			"16": "images/favicon-16.png",
+			"32": "images/favicon-32.png",
+			"48": "images/favicon-48.png",
+			"64": "images/favicon-64.png"
+		}
   },
   "permissions": [
     "https://*/*",
@@ -13,5 +19,11 @@
     "activeTab", 
     "declarativeContent", 
     "storage"
-  ]
+  ],
+  "icons": {
+    "16": "images/favicon-16.png",
+    "32": "images/favicon-32.png",
+		"48": "images/favicon-48.png",
+		"64": "images/favicon-64.png"
+	}
 }
