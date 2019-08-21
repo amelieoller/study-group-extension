@@ -71,7 +71,7 @@
 			});
 	};
 
-	const addDuration = async () => (firstByName('duration').value = 1);
+	const addDuration = async (duration = 1) => (firstByName('duration').value = duration);
 
 	const addZoomUrl = async url =>
 		(firstByName('study_group[custom_room_url]').value = url);
@@ -159,7 +159,7 @@
 				await changeFocus();
 				await addDate(calculateDate(sg.day, week));
 				await addTime(formattedTime);
-				await addDuration();
+				await addDuration(sg.duration);
 				await addZoomUrl(sg.zoom);
 				await submit();
 				await closeModal();
