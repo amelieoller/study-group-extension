@@ -71,12 +71,22 @@
 			});
 	};
 
-	const addDuration = async () => (firstByName('duration').value = 1);
+	const addDuration = async (duration = 1) => (firstByName('duration').value = duration);
 
 	const addZoomUrl = async url =>
 		(firstByName('study_group[custom_room_url]').value = url);
 
 	// Helper functions
+	const getFormattedDate = date => {
+		const month = date.getMonth() + 1;
+		const dayNum = date.getDate();
+
+		// Returns date in this format: 07/25/2019
+		return `${month < 10 ? `0${month}` : month}/${
+			dayNum < 10 ? `0${dayNum}` : dayNum
+		}/${date.getFullYear()}`;
+	};
+
 	const calculateDate = (day, week) => {
 		const d = new Date();
 		const dates = {
@@ -96,16 +106,6 @@
 		d.setDate(d.getDate() + 7 * (week - 1));
 
 		return getFormattedDate(d);
-	};
-
-	const getFormattedDate = date => {
-		const month = date.getMonth() + 1;
-		const dayNum = date.getDate();
-
-		// Returns date in this format: 07/25/2019
-		return `${month < 10 ? `0${month}` : month}/${
-			dayNum < 10 ? `0${dayNum}` : dayNum
-		}/${date.getFullYear()}`;
 	};
 
 	const formatTime = time => {
@@ -159,7 +159,7 @@
 				await changeFocus();
 				await addDate(calculateDate(sg.day, week));
 				await addTime(formattedTime);
-				await addDuration();
+				await addDuration(sg.duration);
 				await addZoomUrl(sg.zoom);
 				await submit();
 				await closeModal();
